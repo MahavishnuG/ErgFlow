@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #f8fafd;
+    color: #0f172a;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.011em;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-feature-settings: "tnum";
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom sleek scrollbar for light theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Guided Breathing Animated Visual Guide Keyframes */
+@keyframes breathingCircleExpand {
+  0% {
+    transform: scale(0.68);
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.2);
+  }
+  100% {
+    transform: scale(1.15);
+    box-shadow: 0 0 45px 15px rgba(20, 184, 166, 0.35);
+  }
+}
+
+@keyframes breathingCircleContract {
+  0% {
+    transform: scale(1.15);
+    box-shadow: 0 0 45px 15px rgba(20, 184, 166, 0.35);
+  }
+  100% {
+    transform: scale(0.68);
+    box-shadow: 0 0 10px 2px rgba(99, 102, 241, 0.15);
+  }
+}
+
+@keyframes breathingHoldPulse {
+  0%, 100% {
+    transform: scale(1.15);
+  }
+  50% {
+    transform: scale(1.17);
+  }
+}
+
+@keyframes breathingRestPulse {
+  0%, 100% {
+    transform: scale(0.68);
+  }
+  50% {
+    transform: scale(0.70);
+  }
+}
+
+.animate-breath-inhale {
+  animation: breathingCircleExpand 4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-breath-hold {
+  animation: breathingHoldPulse 4s ease-in-out infinite;
+}
+
+.animate-breath-exhale {
+  animation: breathingCircleContract 4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-breath-rest {
+  animation: breathingRestPulse 4s ease-in-out infinite;
+}
+

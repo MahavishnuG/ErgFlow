@@ -1,0 +1,6 @@
+{
+  "name": "ErgoFlow: Sedentary & Health Tracker",
+  "description": "Smart office wellness companion reminding you to hydrate, stand, walk, and rest your eyes during work hours (9-6), tracking sedentary time and streaks, and exporting weekly PDF health reports.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
